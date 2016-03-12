@@ -10,11 +10,11 @@ def write_to_gdg_web():
 		my_file.write("title: GDG Surabaya\n")
 		my_file.write("email: manager.gdgsurabaya@gmail.com\n")
 		my_file.write('baseurl: ""\n')
-		my_file.write('url: http://dev.gdgsurabaya.org\n')
+		my_file.write('url: http://gdgsurabaya.org\n')
 		my_file.write("markdown: kramdown\n")
 		my_file.write("port: 80\n")
 		my_file.write("host: 0.0.0.0\n")
-		my_file.write("webserver: http://dev.gdgsurabaya.org:8000\n")
+		my_file.write("webserver: http://gdgsurabaya.org:8000\n")
 		my_file.close()
 	#end with
 #end def

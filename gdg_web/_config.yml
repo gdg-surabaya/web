@@ -1,8 +1,8 @@
 title: GDG Surabaya
 email: manager.gdgsurabaya@gmail.com
 baseurl: ""
-url: http://dev.gdgsurabaya.org
+url: http://gdgsurabaya.org
 markdown: kramdown
 port: 80
 host: 0.0.0.0
-webserver: http://dev.gdgsurabaya.org:8000
+webserver: http://gdgsurabaya.org:8000
