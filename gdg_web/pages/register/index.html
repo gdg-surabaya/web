@@ -1,0 +1,47 @@
+---
+layout: register
+permalink: /register
+---
+<div class="container">
+    <div class="fs-form-wrap" id="fs-form-wrap">
+        <div class="fs-title">
+            <h1>Registrasi Member GDG Surabaya</h1>
+        </div>
+        <form id="form_register" name="form_register" class="fs-form fs-form-full" autocomplete="off">
+            <ol class="fs-fields">
+                <li>
+                    <label class="fs-field-label fs-anim-upper" for="txt_nama">Siapa <u>Nama</u> kamu?</label>
+                    <input class="fs-anim-lower" id="txt_nama" name="txt_nama" type="text" placeholder="Daniel Giovani" required/>
+                </li>
+                <li data-input-trigger>
+                    <label class="fs-field-label fs-anim-upper" for="txt_jenis_kelamin" data-info="Jujurlah terhadap jenis kaliman kalian">Apakah kamu <u>Pria / Wanita</u>?</label>
+                    <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+                        <span><input id="txt_pria" name="rb_jenis_kelamin" type="radio" value="Pria"/><label for="txt_pria" class="radio-pria">Pria</label></span>
+                        <span><input id="txt_wanita" name="rb_jenis_kelamin" type="radio" value="Wanita"/><label for="txt_wanita" class="radio-wanita">Wanita</label></span>
+                    </div>
+                </li>
+                <li>
+                    <label class="fs-field-label fs-anim-upper" for="txt_email" data-info="Kami tidak akan mengirmkan SPAM. Kami janji...">Apa alamat <u>Email</u> kamu??</label>
+                    <input class="fs-anim-lower" id="txt_email" name="txt_email" type="email" placeholder="daniel.gio@gmail.com" required/>
+                </li>
+                <li>
+                    <label class="fs-field-label fs-anim-upper" for="txt_hp" data-info="Janji deh! Kami tidak akan terror kamu...">Minta nomor <u>HP</u> kamu dong??</label>
+                    <input class="fs-anim-lower" id="txt_hp" name="txt_hp" type="text" placeholder="081223094813" required/>
+                </li>
+                <li>
+                    <label class="fs-field-label fs-anim-upper" for="txt_institusi" data-info="Kalau sekolah, bilang aja kamu sekolah...">Dari <u>Institusi</u> mana nih??</label>
+                    <input class="fs-anim-lower" id="txt_institusi" name="txt_institusi" type="text" placeholder="Sekolah Tinggi Teknik Surabaya" required/>
+                </li>
+                <li>
+                    <label class="fs-field-label fs-anim-upper" for="txt_profesi" data-info="Pelajar? Developer? Atau CEO Nih?">Apa <u>Profesi</u> kamu??</label>
+                    <input class="fs-anim-lower" id="txt_profesi" name="txt_profesi" type="text" placeholder="Pelajar / Developer / CEO" required/>
+                </li>
+                <li>
+                    <label class="fs-field-label fs-anim-upper" for="txt_minat">Tunjukan <u>Minat</u> kamu di dunia Google Developer!</label>
+                    <textarea class="fs-anim-lower" id="txt_minat" name="txt_minat" placeholder="Deskripsikan tentang apa yang sudah kamu lakukan, dan mengapa kamu tertarik untuk ambil bagian dalam GDG Surabaya?"></textarea>
+                </li>
+            </ol><!-- /fs-fields -->
+            <button id="btn_submit" class="fs-submit" type="submit">Daftar Menjadi Member</button>
+        </form><!-- /fs-form -->
+    </div><!-- /fs-form-wrap -->
+</div>

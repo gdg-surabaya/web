@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include plugins/full_screen_form/head.html %}
+        {% if page.register_complete == true %}{% include head.html %}{% endif %}
+    </head>
+    <body>
+        {{ content }}
+
+        {% include footer_script.html %}
+        {% if page.register_complete != true %}
+            {% include plugins/full_screen_form/footer.html %}
+            <script src="{{ '/assets/js/register/main.js' | prepend: site.baseurl }}"></script>
+        {% endif %}
+    </body>
+</html>

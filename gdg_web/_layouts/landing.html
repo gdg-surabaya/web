@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include head.html %}
+        {% include plugins/full_bg_slider/head.html %}
+        {% include plugins/blockquote/head.html %}
+        {% include plugins/social_media_button/head.html %}
+    </head>
+    <body>
+        <ul class="cb-slideshow">
+            <li><span>Image 01</span><div><h3></h3></div></li>
+            <li><span>Image 02</span><div><h3></h3></div></li>
+            <li><span>Image 03</span><div><h3></h3></div></li>
+            <li><span>Image 04</span><div><h3></h3></div></li>
+            <li><span>Image 05</span><div><h3></h3></div></li>
+            <li><span>Image 06</span><div><h3></h3></div></li>
+        </ul>
+        {% include pages/landing/header.html %}
+        <div class="row">
+            {% include pages/landing/content.html %}
+        </div>
+        {% include pages/landing/footer.html %}
+        {% include footer_script.html %}
+    </body>
+</html>
