@@ -1,7 +1,8 @@
-# things.py
-
 # Let's get this party started
-import falcon, json, pika
+from bson import json_util
+import falcon
+import pika
+import config
 
 
 def crossdomain(req, resp):
@@ -13,20 +14,20 @@ class Register(object):
         document = dict(
             nama = req.get_param("txt_nama"),
             jenis_kelamin = req.get_param("rb_jenis_kelamin"),
-            txt_email = req.get_param("txt_email"),
-            txt_hp = req.get_param("txt_hp"),
-            txt_institusi = req.get_param("txt_institusi"),
-            txt_profesi = req.get_param("txt_profesi"),
-            txt_minat = req.get_param("txt_minat")
+            email = req.get_param("txt_email"),
+            hp = req.get_param("txt_hp"),
+            institusi = req.get_param("txt_institusi"),
+            profesi = req.get_param("txt_profesi"),
+            minat = req.get_param("txt_minat")
         )
 
         '''Send the data to RabbitMQ Queue'''
-        connection = pika.BlockingConnection(pika.ConnectionParameters(host='172.17.0.3'))
+        connection = pika.BlockingConnection(pika.ConnectionParameters(host=config.config["mq_host"]))
         channel = connection.channel()
 
         channel.queue_declare(queue='gdg_new_member', durable=True)
 
-        message = json.dumps(document)
+        message = json_util.dumps(document)
         channel.basic_publish(
             exchange='',
             routing_key='gdg_new_member',
@@ -40,7 +41,7 @@ class Register(object):
 
         """Handles GET requests"""
         resp.status = falcon.HTTP_200  # This is the default status
-        resp.body = json.dumps(document)
+        resp.body = json_util.dumps(document)
 
 # falcon.API instances are callable WSGI apps
 app = falcon.API(after=[crossdomain])

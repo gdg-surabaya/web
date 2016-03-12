@@ -1,9 +1,12 @@
+---
+---
 (function(){
-    var form_register = $("#form_register")
+    var form_register = $("#form_register");
+	
     form_register.submit(function(event){
         // Stop form from submitting normally
         event.preventDefault();
-
+		
         var txt_nama = document.getElementById("txt_nama")
         var rb_jenis_kelamin = document.getElementsByName("rb_jenis_kelamin")[0]
         var txt_email = document.getElementById("txt_email")
@@ -23,7 +26,7 @@
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "http://192.168.31.129:8000/register",
+            url: "{{site.webserver}}/register",
             data: {
                 "txt_nama":txt_nama.value,
                 "rb_jenis_kelamin":rb_jenis_kelamin.value,
@@ -34,7 +37,7 @@
                 "txt_minat":txt_minat.value
             },
             success: function(response){
-                window.location.assign("http://192.168.31.129/register_complete")
+                window.location.assign("{{site.url}}/register_complete")
             }
         })
     })
